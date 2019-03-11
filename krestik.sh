@@ -10,7 +10,7 @@ nocolor='\033[0m'
     
 
 function game_area {
-  echo "Game area:                                 Stepanavan/Training's GOOD job! "   
+  echo "Game area:                Stepanavan/Training's GOOD job! "   
   echo "7  | 8 | 9"
   echo "___|___|___"
   echo "4  | 5 | 6"
@@ -20,7 +20,7 @@ function game_area {
 
 
 
-  
+  echo
   echo -e "${arr[6]}  | ${arr[7]} | ${arr[8]}"
   echo -e "___|___|___"
   echo -e "${arr[3]}  | ${arr[4]} | ${arr[5]}"
@@ -98,4 +98,3 @@ clear
 game_area
 
 echo "No Winner!"
-
