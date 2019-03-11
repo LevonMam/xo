@@ -29,7 +29,14 @@ function game_area {
   echo -e "   |   |"
 }
 
+function input {
+        read -n 1 index
+        while [[ ${arr[$index - 1]} == "X" || ${arr[$index - 1]} == "O" ]]
+        do
+                read -n 1 index
+        done
 
+}
 
 function check {
 
@@ -99,3 +106,4 @@ clear
 game_area
 
 echo "No Winner!"
+
