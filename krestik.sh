@@ -47,4 +47,14 @@ function check {
 }
 
 game_area
-
+ 
+	
+function check_repeat_index()
+{
+   while [[ ${arr[$index-1]} != 'X' || ${arr[$index-1]} != '0']]
+   do        
+	echo -e "\n Enter correct step:"
+        read index
+        game_area
+   done
+}
