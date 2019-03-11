@@ -76,7 +76,7 @@ game_area
 for (( i = 0; i < 9; i++ )); do
   if [[ $((i % 2)) == 0 ]]
   then
-       echo "First player's turn: "
+       echo "First player's turn: (X) "
        read index
        check_reapet_index
        arr[$index-1]="${green}X${nocolor}"
@@ -84,7 +84,7 @@ for (( i = 0; i < 9; i++ )); do
        game_area
 
    else
-       echo "Second player's turn: "
+       echo "Second player's turn:(0) "
        read index
        check_reapet_index   #ստուգում է արդյոք վանդակի տվյալ տեղը ազատ է թե չէ
        arr[$index-1]=${red}'0'${nocolor}
