@@ -5,8 +5,8 @@ arr=("1" "2" "3" "4" "5" "6" "7" "8" "9")
 clear
 
 green='\033[0;32m'
-       red='\033[0;31m'
-             nocolor='\033[0m'
+red='\033[0;31m'
+nocolor='\033[0m'
     
 
 function game_area {
