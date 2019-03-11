@@ -15,7 +15,14 @@ function game_area {
     echo "   |   |"
 }
 
+function input {
+        read -n 1 index
+        while [[ ${arr[$index - 1]} == "X" || ${arr[$index - 1]} == "O" ]]
+        do
+                read -n 1 index
+        done
 
+}
 
 function check {
 
@@ -58,3 +65,16 @@ function check_repeat_index()
         game_area
    done
 }
+for (( i = 1; i <= 9; i++ )); 
+do
+        game_area 
+        check
+	input
+        if [ $((i%2)) -eq 1 ]
+        then
+                arr[$index - 1]="X"
+        else
+                arr[$index - 1]="O"
+        fi
+done
+echo "Nichya"
