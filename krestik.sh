@@ -95,7 +95,7 @@ for (( i = 0; i < 9; i++ )); do
   check		 # Ստ ուգում է թե ով է հա ղթել
 
 done
-
+clear
 game_area
 
 echo "No Winner!"
