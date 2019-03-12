@@ -1,8 +1,9 @@
 #!/bin/bash
 
-arr=("1" "2" "3" "4" "5" "6" "7" "8" "9")
+arr=("1" "2" "3" "4" "5" "6" "7" "8" "9")	# Զանգվա ծի ինդեքսավորում
 
 clear
+
 
 function game_area {
   echo "Game area:              Stepanavan/Training's GOOD job! "   
@@ -26,7 +27,7 @@ function game_area {
 
 
 
-function check {
+function check {					# Ստ ուգում է անկյունային,ուղղահայաց և հորիզոնական վանդակների  լրացվածությունը
 
               if [[ ( ${arr[0]} == ${arr[1]} ) && ( ${arr[1]} == ${arr[2]} ) ]]; then
                       echo "Congratulations ${arr[0]} WON !!!"; exit ; fi
@@ -55,7 +56,8 @@ function check {
 
 }
 
-function check_repeat_index()
+
+function check_repeat_index() # Ստուգում է լրացված վանդակների կրկնությունը
 {
   while [[  ${arr[$index-1]} != $index  ]]
   do
@@ -66,8 +68,11 @@ function check_repeat_index()
   done
 }
 
+
 function game_X0(){
-game_area
+
+
+game_area			  # Դուրս է բերում մուտք անելու հրահանգը
 for (( i = 0; i < 9; i++ )); do
   if [[ $((i % 2)) == 0 ]]
   then
@@ -87,13 +92,14 @@ for (( i = 0; i < 9; i++ )); do
        game_area
 
   fi
-  check #ստուգում է թե ով է հաղթել
+  check		 # Ստ ուգում է թե ով է հա ղթել
 
 done
 
 game_area
 
 echo "No Winner!"
+
 
 }
 
