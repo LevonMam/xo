@@ -1,15 +1,15 @@
 #!/bin/bash
 
-arr=("1" "2" "3" "4" "5" "6" "7" "8" "9")
+arr=("1" "2" "3" "4" "5" "6" "7" "8" "9")	# Զա նգվա ծի ինդեքսա վորում
 
 clear
 
-green='\033[0;32m'
+green='\033[0;32m'	# X֊ի և O֊ի գույները
 red='\033[0;31m'
 nocolor='\033[0m'
     
 
-function game_area {
+function game_area {	# խ ա ղի տ եսքը
   echo "Game area:                Stepanavan/Training's GOOD job! "   
   echo "7  | 8 | 9"
   echo "___|___|___"
@@ -30,7 +30,7 @@ function game_area {
 }
 
 
-function check {
+function check {					# Ստ ուգում է ուղղա հա յա ց և հորիզոնա կա ն վա նդա կների  լրա ցվա ծությունը
 
               if [[ ( ${arr[0]} == ${arr[1]} ) && ( ${arr[1]} == ${arr[2]} ) ]]; then
                       echo "Congratulations ${arr[0]} WON !!!"; exit ; fi
@@ -59,7 +59,7 @@ function check {
 
 }
 
-function check_reapet_index()
+function check_reapet_index()		# Ստ ուգում է լրա ցվա ծ վա նդա կների կրկնությունը
 {
   while [[  ${arr[$index-1]} != $index  ]]
   do
@@ -71,7 +71,7 @@ function check_reapet_index()
 }
 
 
-game_area
+game_area			  # Դուրս է բերում մուտ ք ա նելու հրա հա նգը
 for (( i = 0; i < 9; i++ )); do
   if [[ $((i % 2)) == 0 ]]
   then
@@ -85,13 +85,13 @@ for (( i = 0; i < 9; i++ )); do
    else
        echo "Second player's turn:(0) "
        read index
-       check_reapet_index   #ստուգում է արդյոք վանդակի տվյալ տեղը ազատ է թե չէ
+       check_reapet_index  	 # Ստ ուգում է ա րդյոք վա նդա կի տ վյա լ տ եղը ա զատ  է թե ոչ
        arr[$index-1]=${red}'0'${nocolor}
        clear
        game_area
 
   fi
-  check #ստուգում է թե ով է հաղթել
+  check		 # Ստ ուգում է թե ով է հա ղթել
 
 done
 clear
