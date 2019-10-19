@@ -13,4 +13,8 @@ The framework collects user personal information from Facebook in order to furth
 
 ## How to run
 
-1. Clone the repository.
+1. Install Java.
+2. Install Maven.
+3. Add both to environment variable PATH.
+4. Clone this repository.
+5. From clonned folder type in command line __mvn package -Dbrowser=BROWSERNAME__ , where BROWSERNAME should be chrome.
