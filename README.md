@@ -8,5 +8,5 @@ The framework collects user personal information from Facebook in order to furth
 
 ## Necessary environments
 
-...Java 1.8 or higher
+..*Java 1.8 or higher
 
