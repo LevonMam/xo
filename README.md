@@ -17,4 +17,4 @@ The framework collects user personal information from Facebook in order to furth
 2. Install Maven.
 3. Add both to environment variable PATH.
 4. Clone this repository.
-5. From clonned folder type in command line __mvn package -Dbrowser=BROWSERNAME__ , where BROWSERNAME should be chrome.
+5. From clonned folder type in command line __mvn package -Dbrowser=name__ , where name should be __chrome__.
